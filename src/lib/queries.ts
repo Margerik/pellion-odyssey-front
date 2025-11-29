@@ -1,0 +1,246 @@
+export const allToursQuery = `
+  *[_type == "tour"] | order(_createdAt desc) {
+    "id": _id,
+    "slug": slug.current,
+    "title": title,
+    "price": price,
+    "duration": {
+      "days": duration.days,
+      "nights": duration.nights
+    },
+    "group": group,
+    "gallery": gallery[].asset->url,
+    "tourDates": tourDates[]{
+      startDate,
+      endDate
+    },
+    "tourType": tourType,
+    "season": season,
+    "years": years,
+    "hashtags": hashtags,
+    "isPopular": isPopular
+  }
+`;
+
+export const getAllGroupsQuery = `
+  *[_type == "tourGroup"]{
+    _id,
+    title,
+    "slug": slug.current,
+    "image": {
+      "url": image.asset->url,
+      "alt": image.alt
+    },
+  }
+`;
+
+export const toursByGroupSlugQuery = `
+  *[_type == "tourGroup" && slug.current == $slug][0]{
+    title,
+    "slug": slug.current,
+    "img": image.asset->url,
+    tours[]->{
+      _id,
+      title,
+      "slug": slug.current,
+      tourPageTitle,
+      description,
+      price,
+      duration,
+      group,
+      difficulty,
+      included,
+      program[]{
+        dayNumber,
+        title,
+        titleTwo,
+        description,
+        activities,
+        accommodation,
+        image {
+          asset->{
+            _id,
+            url
+          },
+          alt
+        }
+      },
+      image {
+        asset->{
+          _id,
+          url
+        },
+        alt
+      },
+     "gallery": gallery[].asset->url,
+      reviews[] {
+        name,
+        instagram,
+        text,
+        photo {
+          asset->{
+            _id,
+            url
+          },
+          alt
+        }
+      },
+      tourDates[],
+      faq[],
+      hashtags,
+      season,
+      years,
+      tourType,
+      isPopular
+    }
+  }
+`;
+
+// export const toursByGroupSlugQuery = (groupSlug: string) => `
+//   *[_type == "tour" && tourGroup->slug.current == "${groupSlug}"] | order(_createdAt desc) {
+//     "id": _id,
+//     "slug": slug.current,
+//     "title": title,
+//     "price": price,
+//     "duration": {
+//       "days": duration.days,
+//       "nights": duration.nights
+//     },
+//     "group": tourGroup,
+//     "gallery": gallery[].asset->url,
+//     "tourDates": tourDates[]{
+//       startDate,
+//       endDate
+//     },
+//     "tourType": tourType,
+//     "season": season,
+//     "years": years,
+//     "hashtags": hashtags,
+//     "isPopular": isPopular
+//   }
+// `;
+
+export const allPopularToursQuery = `
+  *[_type == "tour" && isPopular == true] | order(_createdAt desc) {
+    "id": _id,
+    "slug": slug.current,
+    "title": title,
+    "price": price,
+    "duration": {
+      "days": duration.days,
+      "nights": duration.nights
+    },
+    "group": group,
+    "gallery": gallery[].asset->url,
+    "tourDates": tourDates[] {
+      startDate,
+      endDate
+    },
+    "tourType": tourType,
+    "season": season,
+    "years": years,
+    "hashtags": hashtags,
+    "isPopular": isPopular
+  }
+`;
+
+export const tourBySlugQuery = `
+  *[_type == "tour" && slug.current == $slug][0] {
+    "id": _id,
+    "slug": slug.current,
+    "title": title,
+    "tourPageTitle": tourPageTitle,
+    "price": price,
+    "duration": {
+      "days": duration.days,
+      "nights": duration.nights
+    },
+    "group": group,
+    "difficulty": difficulty,
+    "image": image.asset->url,
+    "gallery": gallery[].asset->url,
+    "tourDates": tourDates[]{
+      startDate,
+      endDate
+    },
+    "tourType": tourType,
+    "season": season,
+    "hashtags": hashtags,
+    "description": description,
+    "included": included,
+    "program": program[]{
+      dayNumber,
+      title,
+      titleTwo,
+      "image": image.asset->url,
+      description,
+      activities,
+      accommodation
+    },
+    "faq": faq[]{
+      question,
+      answer
+    },
+    "reviews": reviews[]{
+      name,
+      instagram,
+      text,
+      "photo": photo.asset->url
+    },
+    "founders": founders
+  }
+`;
+
+export const foundersQuery = `
+  *[_type == "founders"][0] {
+    "foundersImage": foundersImage.asset->url,
+    "foundersImageAlt": foundersImage.alt,
+    "foundersNameLeft": foundersNameLeft,
+    "foundersLeftInstagram": foundersLeftInstagram,
+    "foundersNameRight": foundersNameRight,
+    "foundersRightInstagram": foundersRightInstagram,
+    "foundersAchievementsList": foundersAchievementsList
+  }
+`;
+
+export const allReviewsQuery = `
+  *[_type == "review"] {
+    "photo": {
+      "url": photo.asset->url,
+      "alt": photo.alt
+    },
+    "text": text
+  }
+`;
+
+export const allReportsQuery = `
+  *[_type == "report"] | order(_createdAt desc) {
+    "id": _id,
+    "slug": slug.current,
+    title,
+    subtitle,
+    country,
+    locations,
+    description,
+    "gallery": gallery[]{
+      "url": asset->url,
+      "alt": alt
+    }
+  }
+`;
+
+export const reportBySlugQuery = `
+  *[_type == "report" && slug.current == $slug][0]{
+    "id": _id,
+    title,
+    subtitle,
+    country,
+    locations,
+    description,
+    "slug": slug.current,
+    gallery[] {
+      "url": asset->url,
+      "alt": alt
+    }
+  }
+`;

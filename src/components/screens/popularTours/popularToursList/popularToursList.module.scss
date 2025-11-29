@@ -1,0 +1,226 @@
+@use "../../../../assets/style/variables" as *;
+
+.popularToursList {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider {
+    width: 100%;
+    margin-bottom: 40px;
+    :global(.splide__list) {
+        align-items: stretch !important;
+    }
+    :global(.splide__pagination__page.is-active) {
+        background-color: $orange !important;
+    }
+
+    :global(.splide__pagination__page) {
+        background-color: #67bcef !important;
+    }
+    :global(.splide__arrow svg) {
+        fill: #00bfff !important;
+    }
+
+    :global(.splide__list) {
+        min-height: 500px !important;
+        
+    }
+    :global(.splide__arrow--prev) {
+        left: -4em !important;
+    }
+
+    :global(.splide__arrow--next) {
+        right: -4em !important;
+    }
+
+
+    :global(.splide__pagination) {
+        bottom: -1.5em !important;
+    }
+
+    @media (max-width: 1290px) {
+        :global(.splide__arrow--prev) {
+            left: 15em !important;
+        }
+
+        :global(.splide__arrow--next) {
+            right: 15em !important;
+        }
+    }
+
+    @media (max-width: 890px) {
+        :global(.splide__arrow--prev) {
+            left: 7em !important;
+        }
+
+        :global(.splide__arrow--next) {
+            right: 7em !important;
+        }
+    }
+
+
+
+    @media (max-width: 700px) {
+        :global(.splide__arrow--prev) {
+            left: 5em !important;
+        }
+
+        :global(.splide__arrow--next) {
+            right: 5em !important;
+        }
+    }
+
+    @media (max-width: 630px) {
+        :global(.splide__arrow--prev) {
+            left: 3em !important;
+        }
+
+        :global(.splide__arrow--next) {
+            right: 3em !important;
+        }
+    }
+
+    @media (max-width: 570px) {
+        :global(.splide__arrow--prev) {
+            left: 2em !important;
+        }
+
+        :global(.splide__arrow--next) {
+            right: 2em !important;
+        }
+
+    }
+
+    @media (max-width: 560px) {
+        :global(.splide__arrow--prev) {
+            left: 1.5em !important;
+        }
+
+        :global(.splide__arrow--next) {
+            right: 1.5em !important;
+        }
+    }
+    @media (max-width: 540px) {
+        :global(.splide__arrow--prev) {
+            left: 1.5em !important;
+        }
+
+        :global(.splide__arrow--next) {
+            right: 1.5em !important;
+        }
+    }
+    @media (max-width: 530px) {
+        :global(.splide__arrow--prev) {
+            left: 1.5em !important;
+        }
+
+        :global(.splide__arrow--next) {
+            right: 1.5em !important;
+        }
+    }
+    @media (max-width: 515px) {
+        :global(.splide__arrow--prev) {
+            left: 0.5em !important;
+        }
+
+        :global(.splide__arrow--next) {
+            right: 0.5em !important;
+        }
+    }
+}
+
+.scrollHint {
+    display: none;
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+    margin-bottom: 20px;
+
+    @media (max-width: 500px) {
+      display: block;
+    }
+}
+
+
+.button {
+    text-align: center;
+    width: auto !important;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 32px;
+    margin-bottom: 40px;
+
+}
+
+.title {
+    margin-bottom: 50px;
+}
+
+@media (max-width:1200px) {
+    .items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 40px;
+    }
+}
+
+
+@media (max-width:750px) {
+    .items {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width:640px) {
+    .title {
+        font-size: 3.6rem !important;
+    }
+}
+
+@media (max-width:580px) {
+    .title {
+        font-size: 3.2rem !important;
+    }
+}
+
+@media (max-width:520px) {
+    .title {
+        font-size: 3rem !important;
+    }
+}
+
+@media (max-width:480px) {
+    .title {
+        font-size: 2.6rem !important;
+        line-height: 2.6rem !important;
+    }
+}
+
+@media (max-width:420px) {
+    .title {
+        font-size: 2.2rem !important;
+        line-height: 2.2rem !important;
+    }
+}
+
+@media (max-width:360px) {
+    .title {
+        font-size: 2rem !important;
+        line-height: 2rem !important;
+    }
+}
+
+@media (max-width:340px) {
+    .title {
+        font-size: 1.8rem !important;
+        line-height: 1.8rem !important;
+    }
+}

@@ -1,0 +1,49 @@
+@use "../../../assets/style/variables" as *;
+
+.title {
+  font-size: clamp(12px, 5vw, 80px);
+  font-weight: 700;
+  line-height: 1;
+  transition: all .3s ease-in-out;
+  font-family: var(--benzin-bold), sans-serif;
+  text-transform: uppercase;
+}
+
+.text {
+  font-size: clamp(12px, 2vw, 24px);
+  font-weight: 400;
+  line-height: 1.5;
+  color: $text-color;
+  transition: all .3s ease-in-out;
+  font-family: var(--benzin-regular), sans-serif;
+}
+
+.section {
+  height: 100vh;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  justify-content: center;
+  gap: clamp(12px, 3vw, 32px);
+}
+
+.formButton {
+  background: $orange;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: clamp(12px, 2vw, 18px);
+  &:hover {
+    background: rgb(85 179 237);
+  }
+}

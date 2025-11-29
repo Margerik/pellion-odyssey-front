@@ -1,0 +1,106 @@
+@use "../../../assets/style/variables" as *;
+
+.tourCard {
+  display: flex;
+  flex-direction: column;
+  min-height: 490px;
+  max-width: 370px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 12px -4px #00000014;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 18px -4px #00000014;
+
+  }
+
+  @media (max-width: 1290px) {
+    margin: 0 auto;
+  }
+}
+
+.tourImage {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+}
+
+.tourInfo {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 1.5rem;
+}
+
+.tourTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+
+  .tag {
+    font-size: 0.7rem;
+    background: #f5f5f5;
+    color: #666;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    text-transform: lowercase;
+  }
+}
+
+.tourTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  color: #333;
+}
+
+.tourDetails {
+  margin-bottom: 1.2rem;
+  flex-grow: 1;
+
+  .tourDate,
+  .tourGroup {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.3rem;
+  }
+
+  .tourPrice {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: $orange;
+    margin-top: 0.6rem;
+  }
+}
+
+.detailsButton {
+  width: 100%;
+  background: $orange;
+  border: 2px solid $orange;
+  color: $orange;
+  font-weight: 600;
+  padding: 0.7rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  margin-top: auto;
+
+  &:hover {
+    background: transparent;
+    color: $orange;
+  }
+}

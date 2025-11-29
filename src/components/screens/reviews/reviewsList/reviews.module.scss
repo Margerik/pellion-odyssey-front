@@ -1,0 +1,104 @@
+@use "../../../../assets/style/variables" as *;
+
+.title {
+    padding-bottom: 50px;
+
+    @media (max-width: 1040px) {
+        font-size: 3.8rem !important;
+    }
+    @media (max-width: 970px) {
+        font-size: 3.4rem !important;
+    }
+    @media (max-width: 870px) {
+        font-size: 3rem !important;
+        line-height: 3rem !important;
+    }
+    @media (max-width: 800px) {
+        font-size: 2.6rem !important;
+        line-height: 2.6rem !important;
+    }
+    @media (max-width: 680px) {
+        font-size: 2.2rem !important;
+        line-height: 2.2rem !important;
+    }
+    @media (max-width: 570px) {
+        font-size: 2rem !important;
+        line-height: 2rem !important;
+    }
+    @media (max-width: 530px) {
+        font-size: 1.8rem !important;
+        line-height: 1.8rem !important;
+    }
+    @media (max-width: 480px) {
+        font-size: 1.6rem !important;
+        line-height: 1.6rem !important;
+    }
+    @media (max-width: 420px) {
+        font-size: 1.4rem !important;
+        line-height: 1.4rem !important;
+    }
+    @media (max-width: 380px) {
+        font-size: 1.2rem !important;
+        line-height: 1.2rem !important;
+    }
+}
+
+.reviews {
+    padding-bottom: 80px;
+    padding-top: 25px;
+}
+
+.slider {
+    padding-bottom: 50px;
+    :global(.splide__arrow--prev) {
+        left: -5em !important;
+    }
+    :global(.splide__arrow--next) {
+        right: -5em !important;
+    }
+    
+    :global(.splide__pagination) {
+        bottom: -1.5em;
+    }
+
+    :global(.splide__pagination__page.is-active) {
+        background-color: $orange !important;
+    }
+
+    :global(.splide__pagination__page) {
+        background-color: #67bcef !important;
+    }
+    :global(.splide__arrow svg) {
+        fill: $orange !important;
+    }
+    
+    @media (max-width: 1300px) {
+        :global(.splide__arrow--prev) {
+            left: 5em !important;
+        }
+        :global(.splide__arrow--next) {
+            right: 5em !important;
+        }
+    }
+    
+    @media (max-width: 980px) {
+        :global(.splide__arrow--prev) {
+            left: 4em !important;
+        }
+        :global(.splide__arrow--next) {
+            right: 4em !important;
+        }
+    }
+    
+    @media (max-width: 840px) {
+        :global(.splide__arrow--prev) {
+            left: 2em !important;
+        }
+        :global(.splide__arrow--next) {
+            right: 2em !important;
+        }
+    }
+}
+
+
+

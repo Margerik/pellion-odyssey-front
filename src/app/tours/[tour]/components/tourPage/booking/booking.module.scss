@@ -1,0 +1,210 @@
+@use "../../../../../../assets/style/_variables" as *;
+
+
+.booking {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @media (max-width:400px) {
+    gap: 10px;
+  }
+
+  .title {
+    @media (max-width:810px) {
+      font-size: 3.6rem;
+    }
+    @media (max-width:720px) {
+      font-size: 3.2rem;
+      line-height: 3rem;
+    }
+    @media (max-width:630px) {
+      font-size: 2.8rem;
+      line-height: 2.6rem;
+    }
+    @media (max-width:550px) {
+      font-size: 2.4rem;
+      line-height: 2.2rem;
+    }
+    @media (max-width:480px) {
+      font-size: 2.2rem;
+      line-height: 2rem;
+    }
+    @media (max-width:440px) {
+      font-size: 2rem;
+      line-height: 1.8rem;
+    }
+    @media (max-width:400px) {
+      font-size: 1.6rem;
+      line-height: 1.4rem;
+    }
+    @media (max-width:340px) {
+      font-size: 1.4rem;
+      line-height: 1.2rem;
+    }
+  }
+  .bookingText {
+    color: $text-color;
+    font-size: 27px;
+    max-width: 715px;
+    line-height: 35px;
+    @media (max-width:810px) {
+      font-size: 25px;
+    }
+    @media (max-width:720px) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+    @media (max-width:630px) {
+      font-size: 22px;
+      line-height: 28px;
+    }
+    @media (max-width:550px) {
+      font-size: 20px;
+      line-height: 26px;
+    }
+    @media (max-width:480px) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    @media (max-width:440px) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    @media (max-width:400px) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+    @media (max-width:340px) {
+      font-size: 13px;
+      line-height: 16px;
+    }
+  }
+  .tourBooking {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 30px;
+    @media (max-width:400px) {
+      gap: 20px;
+    }
+
+    .bookBtn {
+      position: relative;
+      overflow: hidden;
+      border-radius: 44px;
+      background: #d4ecfa;
+      border: none;
+      padding: 36px 41px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: var(--benzin-medium);
+      font-size: 20px;
+      text-transform: uppercase;
+      z-index: 1;
+      text-align: center;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(250, 236, 212, 0.6);
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -30%;
+        width: 8px;
+        height: 200%;
+        background: rgba(255, 255, 255, 0.8);
+        filter: blur(2px);
+        transform: rotate(25deg);
+        animation: shine 2.5s infinite;
+        pointer-events: none;
+      }
+
+      @keyframes shine {
+        0% {
+          left: -30%;
+        }
+
+        100% {
+          left: 130%;
+        }
+      }
+      @media (max-width:720px) {
+        font-size: 18px;
+        padding: 32px 37px;
+      }
+      @media (max-width:550px) {
+        font-size: 16px;
+        padding: 28px 33px;
+      }
+      @media (max-width:400px) {
+        font-size: 14px;
+        padding: 24px 29px;
+      }
+      @media (max-width:340px) {
+        font-size: 12px;
+        padding: 20px 25px;
+      }
+    }
+    .tourPriceInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: var(--benzin-bold), sans-serif;
+      line-height: 33px;
+      text-transform: uppercase;
+
+      @media (max-width:550px) {
+        line-height: 25px;
+      }
+      @media (max-width:400px) {
+        line-height: 22px;
+      }
+      @media (max-width:340px) {
+        line-height: 20px;
+      }
+
+      .priceLabel {
+        font-size: 22px;
+        @media (max-width:550px) {
+          font-size: 20px;
+        }
+        @media (max-width:400px) {
+          font-size: 17px;
+        }
+        @media (max-width:340px) {
+          font-size: 15px;
+        }
+      }
+
+      .priceValue {
+        font-size: 33px;
+        color: $orange;
+        @media (max-width:550px) {
+          font-size: 30px;
+        }
+        @media (max-width:400px) {
+          font-size: 26px;
+        }
+        @media (max-width:340px) {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  .bookingNote {
+      max-width: none;
+      @media (max-width:500px) {
+        max-width: 300px;
+        font-size: 0.9rem;
+        line-height: normal;
+      }
+      
+    }
+}
