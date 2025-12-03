@@ -1,5 +1,5 @@
 @use "../../../assets/style/variables" as *;
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 .hero {
   color: $blue;
@@ -165,7 +165,11 @@
     }
 
     .titleBottom {
-      color: $orange;
+<<<<<<< HEAD
+      color: #0A4D68;
+=======
+      color: #0A4D68 !important;
+>>>>>>> cb6520ff83eed2699a411677bc419afd57515dcc
       font-size: 122px;
       line-height: 119px;
     }
@@ -252,6 +256,7 @@
       text-align: center;
 
       &:hover {
+        background: #074F8A;
         transform: translateY(-2px);
         box-shadow: 0 6px 20px rgba(250, 236, 212, 0.6);
       }
