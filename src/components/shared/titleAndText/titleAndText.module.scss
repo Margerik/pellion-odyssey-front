@@ -1,6 +1,7 @@
 @use "../../../assets/style/variables" as *;
 
 .title {
+    font-family: var(--font-cinzel), serif;
     font-size: 32px;
     font-weight: 700;
     text-transform: uppercase;
