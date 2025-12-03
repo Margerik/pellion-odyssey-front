@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Bebas_Neue, Cinzel } from "next/font/google";
+import { Montserrat, Bebas_Neue, Playfair_Display } from "next/font/google";
 import "../assets/style/global.scss";
 import { Footer } from "@/components/screens/footer/footer";
 import { Container } from "@/components/container";
@@ -15,10 +15,10 @@ const bebasNeue = Bebas_Neue({
   variable: "--font-bebas-neue",
 });
 
-const cinzel = Cinzel({
+const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-cinzel",
+  variable: "--font-playfair",
   display: "swap",
 });
 
@@ -79,7 +79,7 @@ export default function RootLayout({
   return (
     <html lang="ru" suppressHydrationWarning>
       <link rel="icon" href="/images/favicon.ico" sizes="any"/>
-      <body className={`${montserrat.className} ${bebasNeue.variable} ${benzinBold.variable} ${benzinMedium.variable} ${cinzel.variable}`}>
+      <body className={`${montserrat.className} ${bebasNeue.variable} ${benzinBold.variable} ${benzinMedium.variable} ${playfairDisplay.variable}`}>
         {children}
         <Container>
           <Footer />
