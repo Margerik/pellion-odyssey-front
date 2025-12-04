@@ -62,6 +62,13 @@
   }
 }
 
+// ПК версия - гарантируем размер 24px
+@media (min-width: 1025px) {
+  .navLink {
+    font-size: 24px;
+  }
+}
+
 .socialAndContact {
   display: flex;
   align-items: center;
