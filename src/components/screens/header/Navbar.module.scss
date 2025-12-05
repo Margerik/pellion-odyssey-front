@@ -177,9 +177,16 @@
 }
 
 @media (max-width: 1024px) {
+  .navLink {
+    font-size: 14px;
+  }
+  
   .phoneNumber a {
     font-size: 14px;
   }
+// }
+
+// @media (max-width: 1024px) {
   .container {
     grid-template-columns: 1fr max-content;
     padding: 0 20px;
