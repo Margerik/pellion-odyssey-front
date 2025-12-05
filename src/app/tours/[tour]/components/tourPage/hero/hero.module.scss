@@ -37,6 +37,12 @@
     gap: 15px;
     margin-top: 10px;
 
+    .navItem {
+      a {
+        font-size: 24px;
+      }
+    }
+
     @media (max-width: 768px) {
       display: none;
     }
