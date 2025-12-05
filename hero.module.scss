@@ -37,12 +37,6 @@
     gap: 15px;
     margin-top: 10px;
 
-    .navItem {
-      a {
-        font-size: 24px;
-      }
-    }
-
     @media (max-width: 768px) {
       display: none;
     }
@@ -256,8 +250,6 @@
       overflow: hidden;
       border-radius: 44px;
       background: #d4ecfa;
-      background: #074F8A;
-      color: white;
       border: none;
       padding: 36px 41px;
       cursor: pointer;
@@ -313,7 +305,7 @@
 
       .priceValue {
         font-size: 33px;
-        color: #D4AF37;
+        color: $orange;
       }
     }
 
